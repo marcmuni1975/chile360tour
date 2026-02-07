@@ -12,7 +12,7 @@ export default function Home() {
     },
     {
       label: 'GitHub',
-      href: 'https://github.com/mmunizaga2009',
+      href: 'https://github.com/marcmuni1975',
       icon: <FaGithub />,
       delay: 0.1
     },
