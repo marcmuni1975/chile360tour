@@ -51,6 +51,7 @@ export default function Home() {
         username="@chile360tours"
         url="https://www.youtube.com/@chile360tours"
         description="Experiencias reales en Chile 🇨🇱 | Drones y Tecnología"
+        imageUrl="/avatar.jpg"  // <--- Agrega esto
       />
 
       <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
