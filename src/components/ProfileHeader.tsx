@@ -9,9 +9,10 @@ interface ProfileHeaderProps {
     username: string;
     description: string;
     imageUrl?: string; // Opcional, usaremos un placeholder si no hay imagen
+    url?: string; // Nuevo prop opcional
 }
 
-const ProfileHeader: React.FC<ProfileHeaderProps> = ({ name, username, description, imageUrl }) => {
+const ProfileHeader: React.FC<ProfileHeaderProps> = ({ name, username, description, imageUrl, url }) => {
     return (
         <motion.div
             className={styles.container}
@@ -31,7 +32,15 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ name, username, descripti
             </div>
 
             <h1 className={styles.name}>{name}</h1>
-            <p className={styles.username}>{username}</p>
+
+            {url ? (
+                <a href={url} target="_blank" rel="noopener noreferrer" className={styles.usernameLink}>
+                    <p className={styles.username}>{username}</p>
+                </a>
+            ) : (
+                <p className={styles.username}>{username}</p>
+            )}
+
             <p className={styles.description}>{description}</p>
         </motion.div>
     );

@@ -1,9 +1,15 @@
 import ProfileHeader from '@/components/ProfileHeader';
 import SocialLink from '@/components/SocialLink';
-import { FaGithub, FaInstagram, FaTiktok, FaPinterest } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaTiktok, FaPinterest, FaYoutube } from 'react-icons/fa';
 
 export default function Home() {
   const links = [
+    {
+      label: 'YouTube',
+      href: 'https://www.youtube.com/@chile360tours',
+      icon: <FaYoutube />,
+      delay: 0.05
+    },
     {
       label: 'GitHub',
       href: 'https://github.com/mmunizaga2009',
@@ -43,6 +49,7 @@ export default function Home() {
       <ProfileHeader
         name="Aerial Chile"
         username="@chile360tours"
+        url="https://www.youtube.com/@chile360tours"
         description="Experiencias reales en Chile 🇨🇱 | Drones y Tecnología"
       />
 
